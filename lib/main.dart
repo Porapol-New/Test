@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   var app = MaterialApp(
-     theme: ThemeData(primarySwatch: Colors.blueGrey),
+   
     title: "Green Office",
     home: Scaffold(
       appBar: AppBar(
@@ -13,7 +13,7 @@ void main() {
           style: TextStyle(color: Colors.white),
         ),
         actions: [],
-        // backgroundColor: Color.fromARGB(255, 71, 71, 71),
+        backgroundColor: Color.fromARGB(255, 71, 71, 71),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(20),
@@ -26,7 +26,7 @@ void main() {
       
     ),
     debugShowCheckedModeBanner: false,
-   
+
   );
   runApp(app);
 }
