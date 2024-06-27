@@ -5,7 +5,7 @@ void main() {
     title: "Green Office",
     home: Scaffold(
       appBar: AppBar(
-        title: Text("Green Office"),
+        title: Text("Green Offices"),
       ),
     ),
   );
