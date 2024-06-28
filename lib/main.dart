@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 void main() {
   var app = MaterialApp(
-   
     title: "Green Office",
     home: Scaffold(
       appBar: AppBar(
@@ -12,7 +11,11 @@ void main() {
           "Green Office",
           style: TextStyle(color: Colors.white),
         ),
-        actions: [],
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          tooltip: 'Menu Icon',color: Colors.white  ,
+          onPressed: () {},
+        ),
         backgroundColor: Color.fromARGB(255, 71, 71, 71),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -20,13 +23,9 @@ void main() {
               bottomLeft: Radius.circular(20)),
         ),
       ),
-      body: Column(
-        
-      ),
-      
+      body: SafeArea(child: ListView(children: [Row(children: [Expanded(child: Container())],)],)),
     ),
     debugShowCheckedModeBanner: false,
-
   );
   runApp(app);
 }
