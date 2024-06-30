@@ -13,7 +13,8 @@ void main() {
         ),
         leading: IconButton(
           icon: const Icon(Icons.menu),
-          tooltip: 'Menu Icon',color: Colors.white  ,
+          tooltip: 'Menu Icon',
+          color: Colors.white,
           onPressed: () {},
         ),
         backgroundColor: Color.fromARGB(255, 71, 71, 71),
@@ -23,7 +24,40 @@ void main() {
               bottomLeft: Radius.circular(20)),
         ),
       ),
-      body: SafeArea(child: ListView(children: [Row(children: [Expanded(child: Container())],)],)),
+      body: SafeArea(
+          child: ListView(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                  child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(20)),
+                  Image.asset('assets/P.png')
+                  // Image.network(
+                  //   "https://www.groovygreen.com/wp-content/uploads/2017/07/green-office.jpg",
+                  //   loadingBuilder: (context, child, Progress) {
+                  //     return Progress == null
+                  //         ? child
+                  //         : LinearProgressIndicator(
+                  //             backgroundColor: Colors.black,
+                  //           );
+                  //   },
+                  // ),
+                ],
+              )),
+              Expanded(
+                  child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(20)),
+                  Text("DATA"),
+                  Text("dddddddddddddddddddddddddddddddddddddddddddddddddd"),
+                ],
+              ))
+            ],
+          )
+        ],
+      )),
     ),
     debugShowCheckedModeBanner: false,
   );
