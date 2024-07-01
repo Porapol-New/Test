@@ -10,13 +10,13 @@ void main() {
         title: Text(
           "Green Office",
           style: TextStyle(color: Colors.white),
-        ),
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          tooltip: 'Menu Icon',
-          color: Colors.white,
-          onPressed: () {},
-        ),
+        ),leading:Image.asset("assets/logog.png",width: 30,height: 20,),
+        // leading: IconButton(
+        //   icon: const Icon(Icons.menu),
+        //   tooltip: 'Menu Icon',
+        //   color: Colors.white,
+        //   onPressed: () {},
+        // ),
         backgroundColor: Color.fromARGB(255, 71, 71, 71),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -26,14 +26,10 @@ void main() {
       ),
       body: SafeArea(
           child: ListView(
-        children: [
-          Row(
-            children: [
-              Expanded(
-                  child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(20)),
-                  Image.asset('assets/P.png')
+        children: [Row(children: [Expanded(
+                  child:Row(children: [Image.asset('assets/greenoffice.jpg'),],)
+                  //  Padding(padding: EdgeInsets.only(left: 10,right: 10)),
+             
                   // Image.network(
                   //   "https://www.groovygreen.com/wp-content/uploads/2017/07/green-office.jpg",
                   //   loadingBuilder: (context, child, Progress) {
@@ -44,18 +40,12 @@ void main() {
                   //           );
                   //   },
                   // ),
-                ],
-              )),
-              Expanded(
-                  child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(20)),
-                  Text("DATA"),
-                  Text("dddddddddddddddddddddddddddddddddddddddddddddddddd"),
-                ],
-              ))
-            ],
-          )
+                
+              ),],)
+              
+              
+            
+          
         ],
       )),
     ),
