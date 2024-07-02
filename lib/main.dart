@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 
 void main() {
   var app = MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: "Green Office",
     home: Scaffold(
       appBar: AppBar(
         title: Text(
           "Green Office",
           style: TextStyle(color: Colors.white),
-        ),leading:Image.asset("assets/logog.png",width: 30,height: 20,),
-        // leading: IconButton(
-        //   icon: const Icon(Icons.menu),
-        //   tooltip: 'Menu Icon',
-        //   color: Colors.white,
-        //   onPressed: () {},
-        // ),
+        ),
+        leading: Image.asset(
+          "assets/logog.png",
+          width: 30,
+          height: 20,
+        ),
         backgroundColor: Color.fromARGB(255, 71, 71, 71),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -25,31 +25,45 @@ void main() {
         ),
       ),
       body: SafeArea(
-          child: ListView(
-        children: [Row(children: [Expanded(
-                  child:Row(children: [Image.asset('assets/greenoffice.jpg'),],)
-                  //  Padding(padding: EdgeInsets.only(left: 10,right: 10)),
-             
-                  // Image.network(
-                  //   "https://www.groovygreen.com/wp-content/uploads/2017/07/green-office.jpg",
-                  //   loadingBuilder: (context, child, Progress) {
-                  //     return Progress == null
-                  //         ? child
-                  //         : LinearProgressIndicator(
-                  //             backgroundColor: Colors.black,
-                  //           );
-                  //   },
-                  // ),
-                
-              ),],)
-              
-              
-            
-          
-        ],
-      )),
+          child: ListView(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Row(
+              children: [Container(color: Colors.black,width: 300,height: 300,),Padding(padding: EdgeInsets.only(right: 100))],
+            ),
+            Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20)),
+                  child: Image.asset('assets/greenoffice.jpg'),
+                ),
+                Padding(padding: EdgeInsets.only(left: 20)),
+              ],
+            )
+          ],
+        )
+      ]
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+
+              //   ],
+              // )
+              //   child: Row(
+              // mainAxisAlignment: MainAxisAlignment.end,
+              // children: [
+              //   Image.asset(
+              //     'assets/greenoffice.jpg',
+              //   ),
+              //   Padding(
+              //     padding: EdgeInsets.only(left: 10, right: 10),
+              //   ),
+              // ],
+
+              )),
     ),
-    debugShowCheckedModeBanner: false,
   );
   runApp(app);
 }
@@ -63,3 +77,9 @@ void main() {
       //         ],
       //       ),
       //     ),
+         // leading: IconButton(
+        //   icon: const Icon(Icons.menu),
+        //   tooltip: 'Menu Icon',
+        //   color: Colors.white,
+        //   onPressed: () {},
+        // ),
