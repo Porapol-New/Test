@@ -20,27 +20,41 @@ void main() {
         backgroundColor: Color.fromARGB(255, 71, 71, 71),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(20),
-              bottomLeft: Radius.circular(20)),
+              //topLeft: Radius.circular(),
+              //  bottomRight: Radius.circular(20),
+              bottomLeft: Radius.circular(30)),
         ),
       ),
       body: SafeArea(
           child: ListView(children: [
-        Row(mainAxisAlignment: MainAxisAlignment.end,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Row(
-              children: [Container(color: Colors.black,width: 300,height: 300,),Padding(padding: EdgeInsets.only(right: 100))],
-            ),
-            Row(
+            Padding(padding: EdgeInsets.only(top: 50, left: 50, right: 50)),
+            Expanded(
+                // color: Colors.red,
+                // width: 800,
+                // height: 500,
+                child: Column(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20)),
-                  child: Image.asset('assets/greenoffice.jpg'),
-                ),
-                Padding(padding: EdgeInsets.only(left: 20)),
+                Text("Green Office",
+                    style: TextStyle(fontSize: 50),
+                    overflow: TextOverflow.ellipsis),
+                Text(
+                    "   สำนักงานสีเขียว หมายถึงแนวคิดและแนวทางการจัดการสำนักงานให้เป็นมิตรต่อสิ่งแวดล้อม โดยมีการใช้ทรัพยากรและพลังงานอย่างมีประสิทธิภาพ ลดผลกระทบต่อสิ่งแวดล้อม และส่งเสริมสุขภาพและความเป็นอยู่ที่ดีของพนักงานในองค์กร แนวคิด ,Green Office มีเป้าหมายในการสร้างสำนักงานที่ยั่งยืนในทุกด้าน และมีการดำเนินการที่เป็นระบบเพื่อให้เกิดการเปลี่ยนแปลงที่ยั่งยืน ตัวอย่างของแนวทางการจัดการ ",
+                    style: TextStyle(fontSize: 15),
+                    overflow: TextOverflow.fade)
               ],
+            )),
+            Expanded(
+              flex: 0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                child: Image.asset('assets/greenoffice.jpg'),
+              ),
+              //Padding(padding: EdgeInsets.only(left: 20)),
             )
           ],
         )
@@ -67,19 +81,3 @@ void main() {
   );
   runApp(app);
 }
-// body:  Container(
-      //       color: Colors.black,
-      //       child: Row(
-      //         children: <Widget>[
-      //           Expanded(
-      //             child: Text('Demo', style: TextStyle(color: Colors.white),),
-      //           )
-      //         ],
-      //       ),
-      //     ),
-         // leading: IconButton(
-        //   icon: const Icon(Icons.menu),
-        //   tooltip: 'Menu Icon',
-        //   color: Colors.white,
-        //   onPressed: () {},
-        // ),
