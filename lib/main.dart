@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+// ignore: unnecessary_import
+import 'package:flutter/widgets.dart';
 
 void main() {
   var app = MaterialApp(
@@ -21,16 +23,16 @@ void main() {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               //topLeft: Radius.circular(),
-              //  bottomRight: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               bottomLeft: Radius.circular(30)),
-        ),
+        ),//actions: [IconButton(onPressed: (){}, icon: IconData  = IconData(0xee93, fontFamily: 'MaterialIcons')],
       ),
       body: SafeArea(
           child: ListView(children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: EdgeInsets.only(top: 50, left: 50, right: 50)),
+            Padding(padding: EdgeInsets.all(30)),
             Expanded(
                 // color: Colors.red,
                 // width: 800,
@@ -42,20 +44,19 @@ void main() {
                     overflow: TextOverflow.ellipsis),
                 Text(
                     "   สำนักงานสีเขียว หมายถึงแนวคิดและแนวทางการจัดการสำนักงานให้เป็นมิตรต่อสิ่งแวดล้อม โดยมีการใช้ทรัพยากรและพลังงานอย่างมีประสิทธิภาพ ลดผลกระทบต่อสิ่งแวดล้อม และส่งเสริมสุขภาพและความเป็นอยู่ที่ดีของพนักงานในองค์กร แนวคิด ,Green Office มีเป้าหมายในการสร้างสำนักงานที่ยั่งยืนในทุกด้าน และมีการดำเนินการที่เป็นระบบเพื่อให้เกิดการเปลี่ยนแปลงที่ยั่งยืน ตัวอย่างของแนวทางการจัดการ ",
-                    style: TextStyle(fontSize: 15),
-                    overflow: TextOverflow.fade)
+                    style: TextStyle(fontSize: 15),)
+                    //overflow: TextOverflow.fade)
               ],
             )),
             Expanded(
-              flex: 0,
+              flex: 1,
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20)),
-                child: Image.asset('assets/greenoffice.jpg'),
+                child: Image.asset('assets/greenoffice.jpg',),
               ),
-              //Padding(padding: EdgeInsets.only(left: 20)),
-            )
+            ),Padding(padding: EdgeInsets.all(10))
           ],
         )
       ]
