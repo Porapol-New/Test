@@ -23,16 +23,16 @@ void main() {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               //topLeft: Radius.circular(),
-                bottomRight: Radius.circular(20),
+              bottomRight: Radius.circular(20),
               bottomLeft: Radius.circular(30)),
-        ),//actions: [IconButton(onPressed: (){}, icon: IconData  = IconData(0xee93, fontFamily: 'MaterialIcons')],
+        ), //actions: [IconButton(onPressed: (){}, icon: IconData  = IconData(0xee93, fontFamily: 'MaterialIcons')],
       ),
       body: SafeArea(
           child: ListView(children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: EdgeInsets.all(30)),
+            Padding(padding: EdgeInsets.all(20)),
             Expanded(
                 // color: Colors.red,
                 // width: 800,
@@ -43,20 +43,24 @@ void main() {
                     style: TextStyle(fontSize: 50),
                     overflow: TextOverflow.ellipsis),
                 Text(
-                    "   สำนักงานสีเขียว หมายถึงแนวคิดและแนวทางการจัดการสำนักงานให้เป็นมิตรต่อสิ่งแวดล้อม โดยมีการใช้ทรัพยากรและพลังงานอย่างมีประสิทธิภาพ ลดผลกระทบต่อสิ่งแวดล้อม และส่งเสริมสุขภาพและความเป็นอยู่ที่ดีของพนักงานในองค์กร แนวคิด ,Green Office มีเป้าหมายในการสร้างสำนักงานที่ยั่งยืนในทุกด้าน และมีการดำเนินการที่เป็นระบบเพื่อให้เกิดการเปลี่ยนแปลงที่ยั่งยืน ตัวอย่างของแนวทางการจัดการ ",
-                    style: TextStyle(fontSize: 15),)
-                    //overflow: TextOverflow.fade)
+                  "   สำนักงานสีเขียว หมายถึงแนวคิดและแนวทางการจัดการสำนักงานให้เป็นมิตรต่อสิ่งแวดล้อม โดยมีการใช้ทรัพยากรและพลังงานอย่างมีประสิทธิภาพ ลดผลกระทบต่อสิ่งแวดล้อม และส่งเสริมสุขภาพและความเป็นอยู่ที่ดีของพนักงานในองค์กร แนวคิด ,Green Office มีเป้าหมายในการสร้างสำนักงานที่ยั่งยืนในทุกด้าน และมีการดำเนินการที่เป็นระบบเพื่อให้เกิดการเปลี่ยนแปลงที่ยั่งยืน ตัวอย่างของแนวทางการจัดการ ",
+                  style: TextStyle(fontSize: 15),
+                )
+                //overflow: TextOverflow.fade)
               ],
             )),
             Expanded(
-              flex: 1,
+              //flex: 0,
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20)),
-                child: Image.asset('assets/greenoffice.jpg',),
+                child: Image.asset(
+                  'assets/greenoffice.jpg',
+                ),
               ),
-            ),Padding(padding: EdgeInsets.all(10))
+            ),
+            Padding(padding: EdgeInsets.all(10))
           ],
         )
       ]
