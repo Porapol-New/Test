@@ -47,6 +47,9 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
 
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.2.1  # Use the latest version of url_launcher
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -56,6 +59,7 @@ flutter:
     - assets/P.png
     - assets/greenoffice.jpg
     - assets/logog.png
+    - assets/GF3.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
