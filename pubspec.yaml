@@ -59,7 +59,11 @@ flutter:
     - assets/P.png
     - assets/greenoffice.jpg
     - assets/logog.png
+<<<<<<< HEAD
     - assets/GF3.jpg
+=======
+    - assets/GF2.png
+>>>>>>> 96ec0a8f3fe41bb42a847048ca391b137ad0e7d8
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
