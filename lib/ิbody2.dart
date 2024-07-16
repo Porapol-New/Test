@@ -21,7 +21,7 @@ class Body2 extends StatelessWidget {
         Padding(padding: EdgeInsets.all(20)),
         Expanded(
             child: Column(
-          children: [
+          children: const [
             Text(
               "การประหยัดพลังงาน",
               style: TextStyle(fontSize: 50),

@@ -17,7 +17,7 @@ class WideLayout extends StatelessWidget {
               children: [
                 Text(
                   "Green Office",
-                  style: const TextStyle(fontSize: 50),
+                  style: TextStyle(fontSize: 50),
                   overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 20),

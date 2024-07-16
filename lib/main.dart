@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/%E0%B8%B4body.dart';
 import 'package:flutter_application_1/%E0%B8%B4body2.dart';
+import 'package:flutter_application_1/Body3.dart';
 import 'FloatingButton.dart';
 
 void main() {
@@ -31,7 +32,8 @@ void main() {
           // ), //actions: [IconButton(onPressed: (){}, icon: IconData  = IconData(0xee93, fontFamily: 'MaterialIcons')],
         ),
         body: SafeArea(
-            child: ListView(children: [Body1(), Body2(), Floatingbutton()]))),
+            child: ListView(
+                children: [Body1(), Body2(), Body3(), Floatingbutton()]))),
   );
 
   runApp(app);
