@@ -13,7 +13,6 @@ dependencies:
   video_player: ^2.2.18
   cupertino_icons: ^1.0.6
   url_launcher: ^6.3.0
-  youtube_player_flutter: ^8.1.0
 
 dev_dependencies:
   flutter_test:
@@ -29,3 +28,4 @@ flutter:
     - assets/logog.png
     - assets/GF3.jpg
     - assets/GF2.png
+    - assets\videos\Green-Office.mp4
