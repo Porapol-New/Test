@@ -19,8 +19,7 @@ class Floatingbutton extends StatelessWidget {
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
         onPressed: () {
-          _launchUrl(
-              'https://docs.google.com/forms/d/1x8UzYQwCYNf2_1E64oquFhEl2hCC8TjzZIkKPRdvbjM/prefill');
+          _launchUrl('https://forms.gle/nqCPCipPg1crizkq7');
         },
         child: const Icon(Icons.edit_outlined),
       ),

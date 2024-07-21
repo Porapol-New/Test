@@ -43,16 +43,16 @@ class _Body3State extends State<Body3> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Padding(padding: EdgeInsets.all(1)),
+        const Padding(padding: EdgeInsets.all(20)),
         Expanded(
           child: Column(
             children: const [
               Text(
-                "การประหยัดพลังงาน",
-                style: TextStyle(fontSize: 50),
+                "Guidelines for creating a green office",
+                style: TextStyle(fontSize: 40),
               ),
               Text(
-                "ใช้อุปกรณ์ไฟฟ้าที่มีประสิทธิภาพสูง ปรับการใช้แสงไฟ เครื่องใช้ไฟฟ้า และระบบทำความร้อน/เย็นให้มีประสิทธิภาพสูงสุด และปิดไฟและอุปกรณ์เมื่อไม่ได้ใช้งาน",
+                "คลิปวิดิโอนำเสนอการจัดทำสำนักงานสีเขียว โดยจะบอกถึงขั้นตอนและสิ่งที่ควรทำเพื่อให้เรากลายเป็นสำนักงานสีเขียว หรือ Green office นั้นเอง",
                 style: TextStyle(fontSize: 18),
                 textAlign: TextAlign.center,
               ),
@@ -63,22 +63,31 @@ class _Body3State extends State<Body3> {
           Column(
             children: [
               Padding(padding: EdgeInsets.only(right: 1)),
-              ClipRRect(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(100),
-                    topLeft: Radius.circular(100)),
-                child: Expanded(
-                  flex: 1,
-                  child: SizedBox(
-                    width: 720, // ปรับความกว้างของวิดีโอที่นี่
-                    height: 400, // ปรับความสูงของวิดีโอที่นี่
-                    child: AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: VideoPlayer(_controller),
-                    ),
-                  ),
+              SizedBox(
+                width: 700,
+                height: 400,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(0)),
+                  child: VideoPlayer(_controller),
                 ),
-              ),
+              )
+              // ClipRRect(
+              //   borderRadius: BorderRadius.only(
+              //       bottomLeft: Radius.circular(100),
+              //       topLeft: Radius.circular(100)),
+              //   child: Expanded(
+              //     flex: 1,
+              //     child: SizedBox(
+              //       width: 720, // ปรับความกว้างของวิดีโอที่นี่
+              //       height: 400, // ปรับความสูงของวิดีโอที่นี่
+              //       child: AspectRatio(
+              //         aspectRatio: _controller.value.aspectRatio,
+              //         child: VideoPlayer(_controller),
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              ,
               IconButton(
                 iconSize: 40,
                 icon: Icon(
